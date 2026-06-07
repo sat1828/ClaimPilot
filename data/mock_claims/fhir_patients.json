@@ -1,0 +1,1141 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "entry": [
+    {
+      "id": "patient-001",
+      "name": [
+        {
+          "given": [
+            "John"
+          ],
+          "family": "Doe"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1985-03-15",
+      "address": "1197 Washington St, Denver, FL 77735",
+      "phone": "(616) 818-2288",
+      "encounters": [
+        {
+          "id": "enc-patient-001-1",
+          "period": {
+            "start": "2024-12-13",
+            "end": "2024-12-13"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "City Emergency Care"
+        },
+        {
+          "id": "enc-patient-001-2",
+          "period": {
+            "start": "2024-01-22",
+            "end": "2024-01-23"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "City Emergency Care"
+        }
+      ]
+    },
+    {
+      "id": "patient-002",
+      "name": [
+        {
+          "given": [
+            "Jane"
+          ],
+          "family": "Smith"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1990-07-22",
+      "address": "104 Pine St, Portland, FL 56445",
+      "phone": "(651) 512-5360",
+      "encounters": [
+        {
+          "id": "enc-patient-002-1",
+          "period": {
+            "start": "2024-01-03",
+            "end": "2024-01-04"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        }
+      ]
+    },
+    {
+      "id": "patient-003",
+      "name": [
+        {
+          "given": [
+            "Robert"
+          ],
+          "family": "Johnson"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1972-11-08",
+      "address": "9254 Main St, Portland, CO 62490",
+      "phone": "(550) 880-1677",
+      "encounters": [
+        {
+          "id": "enc-patient-003-1",
+          "period": {
+            "start": "2024-08-09",
+            "end": "2024-08-09"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-003-2",
+          "period": {
+            "start": "2024-04-22",
+            "end": "2024-04-23"
+          },
+          "reason": "Patient presented with encounter for general adult medical examination",
+          "diagnosis": [
+            {
+              "code": "Z00.00",
+              "display": "Encounter for general adult medical examination"
+            }
+          ],
+          "provider": "City Emergency Care"
+        },
+        {
+          "id": "enc-patient-003-3",
+          "period": {
+            "start": "2024-02-10",
+            "end": "2024-02-11"
+          },
+          "reason": "Patient presented with chest pain, unspecified",
+          "diagnosis": [
+            {
+              "code": "R07.9",
+              "display": "Chest pain, unspecified"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-004",
+      "name": [
+        {
+          "given": [
+            "Maria"
+          ],
+          "family": "Garcia"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1988-04-30",
+      "address": "6736 Elm St, Chicago, OR 14758",
+      "phone": "(647) 144-5892",
+      "encounters": [
+        {
+          "id": "enc-patient-004-1",
+          "period": {
+            "start": "2024-12-05",
+            "end": "2024-12-05"
+          },
+          "reason": "Patient presented with contusion of right lower leg",
+          "diagnosis": [
+            {
+              "code": "S80.11XA",
+              "display": "Contusion of right lower leg"
+            }
+          ],
+          "provider": "Downtown Medical Clinic"
+        },
+        {
+          "id": "enc-patient-004-2",
+          "period": {
+            "start": "2024-03-13",
+            "end": "2024-03-14"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-005",
+      "name": [
+        {
+          "given": [
+            "James"
+          ],
+          "family": "Wilson"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1995-09-12",
+      "address": "3206 Oak St, Miami, CO 94640",
+      "phone": "(211) 739-8946",
+      "encounters": [
+        {
+          "id": "enc-patient-005-1",
+          "period": {
+            "start": "2024-05-16",
+            "end": "2024-05-17"
+          },
+          "reason": "Patient presented with unspecified sprain of right ankle",
+          "diagnosis": [
+            {
+              "code": "S93.401A",
+              "display": "Unspecified sprain of right ankle"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-006",
+      "name": [
+        {
+          "given": [
+            "Sarah"
+          ],
+          "family": "Brown"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1982-01-25",
+      "address": "6532 Washington St, Miami, OR 37988",
+      "phone": "(474) 589-1309",
+      "encounters": [
+        {
+          "id": "enc-patient-006-1",
+          "period": {
+            "start": "2024-09-18",
+            "end": "2024-09-19"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Downtown Medical Clinic"
+        },
+        {
+          "id": "enc-patient-006-2",
+          "period": {
+            "start": "2024-10-08",
+            "end": "2024-10-09"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "City Emergency Care"
+        },
+        {
+          "id": "enc-patient-006-3",
+          "period": {
+            "start": "2024-05-04",
+            "end": "2024-05-04"
+          },
+          "reason": "Patient presented with anxiety disorder, unspecified",
+          "diagnosis": [
+            {
+              "code": "F41.9",
+              "display": "Anxiety disorder, unspecified"
+            }
+          ],
+          "provider": "City Emergency Care"
+        }
+      ]
+    },
+    {
+      "id": "patient-007",
+      "name": [
+        {
+          "given": [
+            "Michael"
+          ],
+          "family": "Davis"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1978-06-14",
+      "address": "3287 Cedar St, Springfield, CO 45954",
+      "phone": "(622) 253-1385",
+      "encounters": [
+        {
+          "id": "enc-patient-007-1",
+          "period": {
+            "start": "2024-10-14",
+            "end": "2024-10-14"
+          },
+          "reason": "Patient presented with contusion of right lower leg",
+          "diagnosis": [
+            {
+              "code": "S80.11XA",
+              "display": "Contusion of right lower leg"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        },
+        {
+          "id": "enc-patient-007-2",
+          "period": {
+            "start": "2024-05-05",
+            "end": "2024-05-06"
+          },
+          "reason": "Patient presented with encounter for general adult medical examination",
+          "diagnosis": [
+            {
+              "code": "Z00.00",
+              "display": "Encounter for general adult medical examination"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        }
+      ]
+    },
+    {
+      "id": "patient-008",
+      "name": [
+        {
+          "given": [
+            "Emily"
+          ],
+          "family": "Martinez"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1993-12-03",
+      "address": "8128 Main St, Miami, FL 86896",
+      "phone": "(840) 248-1936",
+      "encounters": [
+        {
+          "id": "enc-patient-008-1",
+          "period": {
+            "start": "2024-03-18",
+            "end": "2024-03-19"
+          },
+          "reason": "Patient presented with essential (primary) hypertension",
+          "diagnosis": [
+            {
+              "code": "I10",
+              "display": "Essential (primary) hypertension"
+            }
+          ],
+          "provider": "City Emergency Care"
+        },
+        {
+          "id": "enc-patient-008-2",
+          "period": {
+            "start": "2024-09-04",
+            "end": "2024-09-05"
+          },
+          "reason": "Patient presented with chest pain, unspecified",
+          "diagnosis": [
+            {
+              "code": "R07.9",
+              "display": "Chest pain, unspecified"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-008-3",
+          "period": {
+            "start": "2024-10-10",
+            "end": "2024-10-11"
+          },
+          "reason": "Patient presented with contusion of right lower leg",
+          "diagnosis": [
+            {
+              "code": "S80.11XA",
+              "display": "Contusion of right lower leg"
+            }
+          ],
+          "provider": "Downtown Medical Clinic"
+        },
+        {
+          "id": "enc-patient-008-4",
+          "period": {
+            "start": "2024-02-20",
+            "end": "2024-02-20"
+          },
+          "reason": "Patient presented with encounter for general adult medical examination",
+          "diagnosis": [
+            {
+              "code": "Z00.00",
+              "display": "Encounter for general adult medical examination"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-008-5",
+          "period": {
+            "start": "2024-01-06",
+            "end": "2024-01-06"
+          },
+          "reason": "Patient presented with low back pain",
+          "diagnosis": [
+            {
+              "code": "M54.5",
+              "display": "Low back pain"
+            }
+          ],
+          "provider": "Downtown Medical Clinic"
+        }
+      ]
+    },
+    {
+      "id": "patient-009",
+      "name": [
+        {
+          "given": [
+            "David"
+          ],
+          "family": "Anderson"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1969-08-19",
+      "address": "2008 Maple St, Springfield, IL 21753",
+      "phone": "(417) 507-4991",
+      "encounters": [
+        {
+          "id": "enc-patient-009-1",
+          "period": {
+            "start": "2024-07-18",
+            "end": "2024-07-18"
+          },
+          "reason": "Patient presented with type 2 diabetes mellitus without complications",
+          "diagnosis": [
+            {
+              "code": "E11.9",
+              "display": "Type 2 diabetes mellitus without complications"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-010",
+      "name": [
+        {
+          "given": [
+            "Lisa"
+          ],
+          "family": "Taylor"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1987-05-27",
+      "address": "761 Main St, Denver, FL 41927",
+      "phone": "(523) 607-1370",
+      "encounters": [
+        {
+          "id": "enc-patient-010-1",
+          "period": {
+            "start": "2024-09-22",
+            "end": "2024-09-22"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-011",
+      "name": [
+        {
+          "given": [
+            "Kevin"
+          ],
+          "family": "Thomas"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1991-02-08",
+      "address": "7218 Washington St, Portland, OR 34579",
+      "phone": "(809) 275-6751",
+      "encounters": [
+        {
+          "id": "enc-patient-011-1",
+          "period": {
+            "start": "2024-09-20",
+            "end": "2024-09-20"
+          },
+          "reason": "Patient presented with unspecified sprain of right ankle",
+          "diagnosis": [
+            {
+              "code": "S93.401A",
+              "display": "Unspecified sprain of right ankle"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-011-2",
+          "period": {
+            "start": "2024-07-17",
+            "end": "2024-07-18"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-011-3",
+          "period": {
+            "start": "2024-01-19",
+            "end": "2024-01-20"
+          },
+          "reason": "Patient presented with encounter for general adult medical examination",
+          "diagnosis": [
+            {
+              "code": "Z00.00",
+              "display": "Encounter for general adult medical examination"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-011-4",
+          "period": {
+            "start": "2024-02-14",
+            "end": "2024-02-14"
+          },
+          "reason": "Patient presented with contusion of right lower leg",
+          "diagnosis": [
+            {
+              "code": "S80.11XA",
+              "display": "Contusion of right lower leg"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-011-5",
+          "period": {
+            "start": "2024-01-21",
+            "end": "2024-01-21"
+          },
+          "reason": "Patient presented with essential (primary) hypertension",
+          "diagnosis": [
+            {
+              "code": "I10",
+              "display": "Essential (primary) hypertension"
+            }
+          ],
+          "provider": "Downtown Medical Clinic"
+        }
+      ]
+    },
+    {
+      "id": "patient-012",
+      "name": [
+        {
+          "given": [
+            "Amanda"
+          ],
+          "family": "Jackson"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1984-10-16",
+      "address": "2245 Main St, Denver, CO 83693",
+      "phone": "(445) 861-6079",
+      "encounters": [
+        {
+          "id": "enc-patient-012-1",
+          "period": {
+            "start": "2024-05-02",
+            "end": "2024-05-03"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-012-2",
+          "period": {
+            "start": "2024-03-03",
+            "end": "2024-03-04"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "City Emergency Care"
+        },
+        {
+          "id": "enc-patient-012-3",
+          "period": {
+            "start": "2024-03-07",
+            "end": "2024-03-08"
+          },
+          "reason": "Patient presented with contusion of right lower leg",
+          "diagnosis": [
+            {
+              "code": "S80.11XA",
+              "display": "Contusion of right lower leg"
+            }
+          ],
+          "provider": "City Emergency Care"
+        },
+        {
+          "id": "enc-patient-012-4",
+          "period": {
+            "start": "2024-05-01",
+            "end": "2024-05-01"
+          },
+          "reason": "Patient presented with encounter for general adult medical examination",
+          "diagnosis": [
+            {
+              "code": "Z00.00",
+              "display": "Encounter for general adult medical examination"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-012-5",
+          "period": {
+            "start": "2024-08-03",
+            "end": "2024-08-04"
+          },
+          "reason": "Patient presented with low back pain",
+          "diagnosis": [
+            {
+              "code": "M54.5",
+              "display": "Low back pain"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-013",
+      "name": [
+        {
+          "given": [
+            "Christopher"
+          ],
+          "family": "White"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1975-07-31",
+      "address": "7946 Elm St, Chicago, CO 30413",
+      "phone": "(790) 608-8335",
+      "encounters": [
+        {
+          "id": "enc-patient-013-1",
+          "period": {
+            "start": "2024-09-09",
+            "end": "2024-09-09"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-014",
+      "name": [
+        {
+          "given": [
+            "Jessica"
+          ],
+          "family": "Harris"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1997-04-11",
+      "address": "6405 Main St, Denver, IL 42220",
+      "phone": "(906) 831-3881",
+      "encounters": [
+        {
+          "id": "enc-patient-014-1",
+          "period": {
+            "start": "2024-04-15",
+            "end": "2024-04-15"
+          },
+          "reason": "Patient presented with contusion of right lower leg",
+          "diagnosis": [
+            {
+              "code": "S80.11XA",
+              "display": "Contusion of right lower leg"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-014-2",
+          "period": {
+            "start": "2024-10-31",
+            "end": "2024-10-31"
+          },
+          "reason": "Patient presented with anxiety disorder, unspecified",
+          "diagnosis": [
+            {
+              "code": "F41.9",
+              "display": "Anxiety disorder, unspecified"
+            }
+          ],
+          "provider": "Downtown Medical Clinic"
+        },
+        {
+          "id": "enc-patient-014-3",
+          "period": {
+            "start": "2024-02-22",
+            "end": "2024-02-22"
+          },
+          "reason": "Patient presented with low back pain",
+          "diagnosis": [
+            {
+              "code": "M54.5",
+              "display": "Low back pain"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        },
+        {
+          "id": "enc-patient-014-4",
+          "period": {
+            "start": "2024-01-09",
+            "end": "2024-01-10"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-015",
+      "name": [
+        {
+          "given": [
+            "Daniel"
+          ],
+          "family": "Martin"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1980-09-05",
+      "address": "4506 Pine St, Miami, FL 83523",
+      "phone": "(933) 443-4490",
+      "encounters": [
+        {
+          "id": "enc-patient-015-1",
+          "period": {
+            "start": "2024-03-17",
+            "end": "2024-03-19"
+          },
+          "reason": "Patient presented with chest pain, unspecified",
+          "diagnosis": [
+            {
+              "code": "R07.9",
+              "display": "Chest pain, unspecified"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-016",
+      "name": [
+        {
+          "given": [
+            "Michelle"
+          ],
+          "family": "Thompson"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1992-11-20",
+      "address": "2904 Oak St, Denver, IL 25198",
+      "phone": "(690) 545-8101",
+      "encounters": [
+        {
+          "id": "enc-patient-016-1",
+          "period": {
+            "start": "2024-01-02",
+            "end": "2024-01-03"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-016-2",
+          "period": {
+            "start": "2024-06-24",
+            "end": "2024-06-24"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-016-3",
+          "period": {
+            "start": "2024-12-05",
+            "end": "2024-12-06"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        },
+        {
+          "id": "enc-patient-016-4",
+          "period": {
+            "start": "2024-08-26",
+            "end": "2024-08-27"
+          },
+          "reason": "Patient presented with encounter for general adult medical examination",
+          "diagnosis": [
+            {
+              "code": "Z00.00",
+              "display": "Encounter for general adult medical examination"
+            }
+          ],
+          "provider": "City Emergency Care"
+        }
+      ]
+    },
+    {
+      "id": "patient-017",
+      "name": [
+        {
+          "given": [
+            "Andrew"
+          ],
+          "family": "Moore"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1970-03-28",
+      "address": "155 Oak St, Denver, IL 39954",
+      "phone": "(734) 225-5923",
+      "encounters": [
+        {
+          "id": "enc-patient-017-1",
+          "period": {
+            "start": "2024-05-20",
+            "end": "2024-05-21"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-017-2",
+          "period": {
+            "start": "2024-04-09",
+            "end": "2024-04-10"
+          },
+          "reason": "Patient presented with anxiety disorder, unspecified",
+          "diagnosis": [
+            {
+              "code": "F41.9",
+              "display": "Anxiety disorder, unspecified"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        },
+        {
+          "id": "enc-patient-017-3",
+          "period": {
+            "start": "2024-05-04",
+            "end": "2024-05-04"
+          },
+          "reason": "Patient presented with contusion of right lower leg",
+          "diagnosis": [
+            {
+              "code": "S80.11XA",
+              "display": "Contusion of right lower leg"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-017-4",
+          "period": {
+            "start": "2024-04-03",
+            "end": "2024-04-03"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        }
+      ]
+    },
+    {
+      "id": "patient-018",
+      "name": [
+        {
+          "given": [
+            "Stephanie"
+          ],
+          "family": "Clark"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1986-08-07",
+      "address": "449 Washington St, Portland, CO 45286",
+      "phone": "(978) 218-4150",
+      "encounters": [
+        {
+          "id": "enc-patient-018-1",
+          "period": {
+            "start": "2024-08-21",
+            "end": "2024-08-21"
+          },
+          "reason": "Patient presented with type 2 diabetes mellitus without complications",
+          "diagnosis": [
+            {
+              "code": "E11.9",
+              "display": "Type 2 diabetes mellitus without complications"
+            }
+          ],
+          "provider": "City Emergency Care"
+        }
+      ]
+    },
+    {
+      "id": "patient-019",
+      "name": [
+        {
+          "given": [
+            "William"
+          ],
+          "family": "Lewis"
+        }
+      ],
+      "gender": "male",
+      "birthDate": "1965-12-15",
+      "address": "8489 Maple St, Denver, IL 51811",
+      "phone": "(804) 691-9205",
+      "encounters": [
+        {
+          "id": "enc-patient-019-1",
+          "period": {
+            "start": "2024-01-02",
+            "end": "2024-01-03"
+          },
+          "reason": "Patient presented with anxiety disorder, unspecified",
+          "diagnosis": [
+            {
+              "code": "F41.9",
+              "display": "Anxiety disorder, unspecified"
+            }
+          ],
+          "provider": "Orthopedic Center of Excellence"
+        },
+        {
+          "id": "enc-patient-019-2",
+          "period": {
+            "start": "2024-07-16",
+            "end": "2024-07-17"
+          },
+          "reason": "Patient presented with low back pain",
+          "diagnosis": [
+            {
+              "code": "M54.5",
+              "display": "Low back pain"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        }
+      ]
+    },
+    {
+      "id": "patient-020",
+      "name": [
+        {
+          "given": [
+            "Nicole"
+          ],
+          "family": "Walker"
+        }
+      ],
+      "gender": "female",
+      "birthDate": "1994-06-01",
+      "address": "3783 Pine St, Portland, OR 37866",
+      "phone": "(726) 936-1769",
+      "encounters": [
+        {
+          "id": "enc-patient-020-1",
+          "period": {
+            "start": "2024-06-15",
+            "end": "2024-06-16"
+          },
+          "reason": "Patient presented with chest pain, unspecified",
+          "diagnosis": [
+            {
+              "code": "R07.9",
+              "display": "Chest pain, unspecified"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        },
+        {
+          "id": "enc-patient-020-2",
+          "period": {
+            "start": "2024-04-08",
+            "end": "2024-04-08"
+          },
+          "reason": "Patient presented with acute nasopharyngitis [common cold]",
+          "diagnosis": [
+            {
+              "code": "J00",
+              "display": "Acute nasopharyngitis [common cold]"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-020-3",
+          "period": {
+            "start": "2024-09-30",
+            "end": "2024-09-30"
+          },
+          "reason": "Patient presented with type 2 diabetes mellitus without complications",
+          "diagnosis": [
+            {
+              "code": "E11.9",
+              "display": "Type 2 diabetes mellitus without complications"
+            }
+          ],
+          "provider": "Springfield General Hospital"
+        },
+        {
+          "id": "enc-patient-020-4",
+          "period": {
+            "start": "2024-06-26",
+            "end": "2024-06-26"
+          },
+          "reason": "Patient presented with encounter for general adult medical examination",
+          "diagnosis": [
+            {
+              "code": "Z00.00",
+              "display": "Encounter for general adult medical examination"
+            }
+          ],
+          "provider": "City Emergency Care"
+        },
+        {
+          "id": "enc-patient-020-5",
+          "period": {
+            "start": "2024-11-17",
+            "end": "2024-11-18"
+          },
+          "reason": "Patient presented with sprain of ligaments of cervical spine",
+          "diagnosis": [
+            {
+              "code": "S13.4XXA",
+              "display": "Sprain of ligaments of cervical spine"
+            }
+          ],
+          "provider": "Memorial Hospital"
+        }
+      ]
+    }
+  ]
+}

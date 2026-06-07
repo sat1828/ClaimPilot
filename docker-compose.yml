@@ -1,0 +1,100 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: claimpilot-db
+    environment:
+      POSTGRES_DB: claimpilot
+      POSTGRES_USER: claimpilot
+      POSTGRES_PASSWORD: claimpilot
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U claimpilot"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - claimpilot-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: claimpilot-redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - claimpilot-net
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: claimpilot-backend
+    env_file: .env
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://claimpilot:claimpilot@postgres:5432/claimpilot
+      - DATABASE_SYNC_URL=postgresql://claimpilot:claimpilot@postgres:5432/claimpilot
+      - REDIS_URL=redis://redis:6379/0
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - claimpilot-net
+    restart: unless-stopped
+
+  celery-worker:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.celery
+    container_name: claimpilot-celery
+    env_file: .env
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://claimpilot:claimpilot@postgres:5432/claimpilot
+      - DATABASE_SYNC_URL=postgresql://claimpilot:claimpilot@postgres:5432/claimpilot
+      - REDIS_URL=redis://redis:6379/0
+    volumes:
+      - ./backend:/app
+      - ./data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - claimpilot-net
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: claimpilot-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - claimpilot-net
+    restart: unless-stopped
+
+networks:
+  claimpilot-net:
+    driver: bridge
+
+volumes:
+  postgres_data:
