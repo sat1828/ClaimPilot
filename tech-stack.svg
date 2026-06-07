@@ -1,0 +1,198 @@
+<svg viewBox="0 0 900 360" xmlns="http://www.w3.org/2000/svg" width="900" height="360">
+  <defs>
+    <linearGradient id="stackBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080c18"/>
+      <stop offset="100%" style="stop-color:#0c1020"/>
+    </linearGradient>
+    <filter id="techGlow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="900" height="360" fill="url(#stackBg)" rx="10"/>
+
+  <!-- Title -->
+  <text x="450" y="35" text-anchor="middle" font-family="'Courier New', monospace" font-size="14" fill="#4a6080" letter-spacing="6">TECHNOLOGY STACK</text>
+  <line x1="50" y1="44" x2="850" y2="44" stroke="#1a2a3a" stroke-width="1"/>
+
+  <!-- Layer labels -->
+  <text x="30" y="90" font-family="monospace" font-size="8" fill="#2a3a50" writing-mode="vertical-rl" transform="rotate(-90, 18, 130)">FRONTEND</text>
+  <text x="30" y="200" font-family="monospace" font-size="8" fill="#2a3a50" writing-mode="vertical-rl" transform="rotate(-90, 18, 235)">BACKEND</text>
+  <text x="30" y="290" font-family="monospace" font-size="8" fill="#2a3a50" writing-mode="vertical-rl" transform="rotate(-90, 18, 320)">INFRA</text>
+
+  <!-- Horizontal separators -->
+  <line x1="50" y1="155" x2="870" y2="155" stroke="#1a2a3a" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="50" y1="255" x2="870" y2="255" stroke="#1a2a3a" stroke-width="0.5" stroke-dasharray="4,4"/>
+
+  <!-- FRONTEND ROW -->
+  <!-- Next.js -->
+  <g transform="translate(55, 65)">
+    <rect x="0" y="0" width="140" height="75" rx="8" fill="#0a1020" stroke="#ffffff" stroke-width="1" opacity="0.6"/>
+    <text x="70" y="28" text-anchor="middle" font-family="monospace" font-size="22" fill="#ffffff">▲</text>
+    <text x="70" y="48" text-anchor="middle" font-family="monospace" font-size="11" fill="#e2e8f0" font-weight="bold">Next.js 15</text>
+    <text x="70" y="60" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">App Router</text>
+    <text x="70" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">React 19</text>
+    <rect x="0" y="0" width="140" height="75" rx="8" fill="none" stroke="#ffffff" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.4;0" dur="3s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Tailwind -->
+  <g transform="translate(210, 65)">
+    <rect x="0" y="0" width="140" height="75" rx="8" fill="#0a1820" stroke="#06b6d4" stroke-width="1"/>
+    <text x="70" y="28" text-anchor="middle" font-family="monospace" font-size="18" fill="#06b6d4">≈</text>
+    <text x="70" y="48" text-anchor="middle" font-family="monospace" font-size="11" fill="#67e8f9" font-weight="bold">Tailwind v4</text>
+    <text x="70" y="60" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">Utility CSS</text>
+    <text x="70" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">Dark theme</text>
+  </g>
+
+  <!-- WebSocket -->
+  <g transform="translate(365, 65)">
+    <rect x="0" y="0" width="140" height="75" rx="8" fill="#0a1820" stroke="#00ff88" stroke-width="1"/>
+    <text x="70" y="28" text-anchor="middle" font-family="monospace" font-size="18" fill="#00ff88">⚡</text>
+    <text x="70" y="48" text-anchor="middle" font-family="monospace" font-size="11" fill="#4ade80" font-weight="bold">WebSocket</text>
+    <text x="70" y="60" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">Live updates</text>
+    <text x="70" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">Adjuster push</text>
+    <circle cx="130" cy="12" r="4" fill="#00ff88">
+      <animate attributeName="opacity" values="1;0.2;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- TypeScript -->
+  <g transform="translate(520, 65)">
+    <rect x="0" y="0" width="140" height="75" rx="8" fill="#0a1020" stroke="#3178c6" stroke-width="1"/>
+    <text x="70" y="30" text-anchor="middle" font-family="monospace" font-size="18" fill="#3178c6" font-weight="bold">TS</text>
+    <text x="70" y="48" text-anchor="middle" font-family="monospace" font-size="11" fill="#60a5fa" font-weight="bold">TypeScript</text>
+    <text x="70" y="60" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">18.8% codebase</text>
+    <text x="70" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">Type-safe API</text>
+  </g>
+
+  <!-- BACKEND ROW -->
+  <!-- FastAPI -->
+  <g transform="translate(55, 170)">
+    <rect x="0" y="0" width="130" height="72" rx="8" fill="#050a20" stroke="#009688" stroke-width="1"/>
+    <text x="65" y="25" text-anchor="middle" font-family="monospace" font-size="16" fill="#009688">⚡</text>
+    <text x="65" y="44" text-anchor="middle" font-family="monospace" font-size="10" fill="#4db6ac" font-weight="bold">FastAPI</text>
+    <text x="65" y="56" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Async REST</text>
+    <text x="65" y="66" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">SQLAlchemy + PG</text>
+  </g>
+
+  <!-- LangGraph -->
+  <g transform="translate(200, 170)">
+    <rect x="0" y="0" width="130" height="72" rx="8" fill="#05050a" stroke="#00d4ff" stroke-width="2" filter="url(#techGlow)"/>
+    <text x="65" y="25" text-anchor="middle" font-family="monospace" font-size="16" fill="#00d4ff">⚙</text>
+    <text x="65" y="44" text-anchor="middle" font-family="monospace" font-size="10" fill="#00d4ff" font-weight="bold">LangGraph</text>
+    <text x="65" y="56" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">State machine</text>
+    <text x="65" y="66" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Checkpointing</text>
+  </g>
+
+  <!-- Claude -->
+  <g transform="translate(345, 170)">
+    <rect x="0" y="0" width="130" height="72" rx="8" fill="#0a050a" stroke="#a78bfa" stroke-width="2" filter="url(#techGlow)"/>
+    <text x="65" y="25" text-anchor="middle" font-family="monospace" font-size="16" fill="#a78bfa">🤖</text>
+    <text x="65" y="44" text-anchor="middle" font-family="monospace" font-size="10" fill="#a78bfa" font-weight="bold">Claude AI</text>
+    <text x="65" y="56" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">tool_use pattern</text>
+    <text x="65" y="66" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">claude-3-5-sonnet</text>
+  </g>
+
+  <!-- Pinecone -->
+  <g transform="translate(490, 170)">
+    <rect x="0" y="0" width="130" height="72" rx="8" fill="#051505" stroke="#10b981" stroke-width="1"/>
+    <text x="65" y="25" text-anchor="middle" font-family="monospace" font-size="16" fill="#10b981">🌲</text>
+    <text x="65" y="44" text-anchor="middle" font-family="monospace" font-size="10" fill="#34d399" font-weight="bold">Pinecone</text>
+    <text x="65" y="56" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Hybrid search</text>
+    <text x="65" y="66" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">BM25 + Dense</text>
+  </g>
+
+  <!-- scikit-learn -->
+  <g transform="translate(635, 170)">
+    <rect x="0" y="0" width="130" height="72" rx="8" fill="#100a05" stroke="#ff6b35" stroke-width="1"/>
+    <text x="65" y="25" text-anchor="middle" font-family="monospace" font-size="16" fill="#ff6b35">🧠</text>
+    <text x="65" y="44" text-anchor="middle" font-family="monospace" font-size="10" fill="#fb923c" font-weight="bold">scikit-learn</text>
+    <text x="65" y="56" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">IsolationForest</text>
+    <text x="65" y="66" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">SMOTE · joblib</text>
+  </g>
+
+  <!-- Celery -->
+  <g transform="translate(780, 170)">
+    <rect x="0" y="0" width="95" height="72" rx="8" fill="#050a05" stroke="#84cc16" stroke-width="1"/>
+    <text x="47" y="25" text-anchor="middle" font-family="monospace" font-size="16" fill="#84cc16">🌿</text>
+    <text x="47" y="44" text-anchor="middle" font-family="monospace" font-size="10" fill="#a3e635" font-weight="bold">Celery</text>
+    <text x="47" y="56" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Task queue</text>
+    <text x="47" y="66" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Parallel jobs</text>
+  </g>
+
+  <!-- INFRA ROW -->
+  <!-- PostgreSQL -->
+  <g transform="translate(55, 268)">
+    <rect x="0" y="0" width="120" height="65" rx="8" fill="#050a1a" stroke="#336791" stroke-width="1"/>
+    <text x="60" y="22" text-anchor="middle" font-family="monospace" font-size="14" fill="#336791">🐘</text>
+    <text x="60" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#5b9bd5" font-weight="bold">PostgreSQL</text>
+    <text x="60" y="52" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">v16 Alpine</text>
+    <text x="60" y="62" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Claims DB</text>
+  </g>
+
+  <!-- Redis -->
+  <g transform="translate(188, 268)">
+    <rect x="0" y="0" width="120" height="65" rx="8" fill="#1a0505" stroke="#dc2626" stroke-width="1"/>
+    <text x="60" y="22" text-anchor="middle" font-family="monospace" font-size="14" fill="#dc2626">⚡</text>
+    <text x="60" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#f87171" font-weight="bold">Redis 7</text>
+    <text x="60" y="52" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Celery broker</text>
+    <text x="60" y="62" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Task results</text>
+  </g>
+
+  <!-- Docker -->
+  <g transform="translate(321, 268)">
+    <rect x="0" y="0" width="120" height="65" rx="8" fill="#050a1a" stroke="#2496ed" stroke-width="1"/>
+    <text x="60" y="22" text-anchor="middle" font-family="monospace" font-size="14" fill="#2496ed">🐳</text>
+    <text x="60" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#60a5fa" font-weight="bold">Docker</text>
+    <text x="60" y="52" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Compose stack</text>
+    <text x="60" y="62" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">5 services</text>
+  </g>
+
+  <!-- Whisper -->
+  <g transform="translate(454, 268)">
+    <rect x="0" y="0" width="120" height="65" rx="8" fill="#0a0518" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="60" y="22" text-anchor="middle" font-family="monospace" font-size="14" fill="#8b5cf6">🎙</text>
+    <text x="60" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#a78bfa" font-weight="bold">Whisper</text>
+    <text x="60" y="52" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Audio → text</text>
+    <text x="60" y="62" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">OpenAI API</text>
+  </g>
+
+  <!-- PyMuPDF -->
+  <g transform="translate(587, 268)">
+    <rect x="0" y="0" width="120" height="65" rx="8" fill="#0a0a05" stroke="#eab308" stroke-width="1"/>
+    <text x="60" y="22" text-anchor="middle" font-family="monospace" font-size="14" fill="#eab308">📄</text>
+    <text x="60" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#fbbf24" font-weight="bold">PyMuPDF</text>
+    <text x="60" y="52" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">PDF parse</text>
+    <text x="60" y="62" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">ReportLab gen</text>
+  </g>
+
+  <!-- FHIR -->
+  <g transform="translate(720, 268)">
+    <rect x="0" y="0" width="155" height="65" rx="8" fill="#050a08" stroke="#14b8a6" stroke-width="1"/>
+    <text x="77" y="22" text-anchor="middle" font-family="monospace" font-size="14" fill="#14b8a6">🏥</text>
+    <text x="77" y="40" text-anchor="middle" font-family="monospace" font-size="10" fill="#2dd4bf" font-weight="bold">FHIR R4 · Geocoding</text>
+    <text x="77" y="52" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Health records · Weather</text>
+    <text x="77" y="62" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a6080">Tavily search · Google Maps</text>
+  </g>
+
+  <!-- Language breakdown bar at bottom -->
+  <text x="450" y="348" text-anchor="middle" font-family="monospace" font-size="9" fill="#2a4060" letter-spacing="2">LANGUAGE BREAKDOWN</text>
+  <g transform="translate(100, 352)">
+    <rect x="0" y="0" width="525" height="8" rx="4" fill="#1a2a3a"/>
+    <!-- Python 74.9% -->
+    <rect x="0" y="0" width="393" height="8" rx="4" fill="#3572A5"/>
+    <!-- TypeScript 18.8% -->
+    <rect x="393" y="0" width="99" height="8" fill="#2b7489"/>
+    <!-- Jupyter 4.8% -->
+    <rect x="492" y="0" width="25" height="8" fill="#DA5B0B"/>
+    <!-- Other -->
+    <rect x="517" y="0" width="8" height="8" rx="0" fill="#2a4060"/>
+  </g>
+  <text x="100" y="348" font-family="monospace" font-size="8" fill="#3572A5">● Python 74.9%</text>
+  <text x="240" y="348" font-family="monospace" font-size="8" fill="#2b7489">● TypeScript 18.8%</text>
+  <text x="390" y="348" font-family="monospace" font-size="8" fill="#DA5B0B">● Jupyter 4.8%</text>
+  <text x="480" y="348" font-family="monospace" font-size="8" fill="#4a6080">● Other</text>
+</svg>

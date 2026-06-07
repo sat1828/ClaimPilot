@@ -1,0 +1,169 @@
+<svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" width="1000" height="480">
+  <defs>
+    <linearGradient id="fraudBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0505"/>
+      <stop offset="100%" style="stop-color:#0f0a05"/>
+    </linearGradient>
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="greenGlow2">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="fraudDots" width="15" height="15" patternUnits="userSpaceOnUse">
+      <circle cx="7.5" cy="7.5" r="0.6" fill="#2a1010" opacity="0.8"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="480" fill="url(#fraudBg)"/>
+  <rect width="1000" height="480" fill="url(#fraudDots)"/>
+
+  <!-- Title -->
+  <text x="500" y="35" text-anchor="middle" font-family="'Courier New', monospace" font-size="16" fill="#ff4444" letter-spacing="6" filter="url(#redGlow)">FRAUD DETECTION PIPELINE</text>
+  <line x1="100" y1="44" x2="900" y2="44" stroke="#2a0808" stroke-width="1"/>
+
+  <!-- Claim input -->
+  <g transform="translate(30, 80)">
+    <rect x="0" y="0" width="130" height="80" rx="8" fill="#150808" stroke="#2a1010" stroke-width="1"/>
+    <text x="65" y="25" text-anchor="middle" font-family="monospace" font-size="11" fill="#4a2020">INCOMING</text>
+    <text x="65" y="40" text-anchor="middle" font-family="monospace" font-size="11" fill="#4a2020">CLAIM</text>
+    <text x="65" y="58" text-anchor="middle" font-family="monospace" font-size="20" fill="#ff6b35">📋</text>
+    <text x="65" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#3a2020">₹89,000 · Health</text>
+  </g>
+
+  <!-- Arrow to signals -->
+  <line x1="160" y1="120" x2="200" y2="120" stroke="#ff4444" stroke-width="2" stroke-dasharray="5,3" opacity="0.6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="0.8s" repeatCount="indefinite"/>
+  </line>
+  <polygon points="196,116 204,120 196,124" fill="#ff4444" opacity="0.6"/>
+
+  <!-- 5 Signal boxes -->
+  <!-- Signal 1: ML Score -->
+  <g transform="translate(205, 55)">
+    <rect x="0" y="0" width="140" height="130" rx="8" fill="#200808" stroke="#ff4444" stroke-width="1.5"/>
+    <text x="70" y="20" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff4444" letter-spacing="1">ML ANOMALY</text>
+    <!-- Gauge -->
+    <text x="70" y="55" text-anchor="middle" font-family="monospace" font-size="30" fill="#ff4444" font-weight="bold" filter="url(#redGlow)">0.93</text>
+    <rect x="15" y="65" width="110" height="10" rx="5" fill="#1a0808"/>
+    <rect x="15" y="65" width="102" height="10" rx="5" fill="#ff4444">
+      <animate attributeName="width" values="0;102;102" dur="2s" fill="freeze"/>
+    </rect>
+    <text x="70" y="90" text-anchor="middle" font-family="monospace" font-size="8" fill="#ff6b35">IsolationForest</text>
+    <text x="70" y="102" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a2020">10K training samples</text>
+    <text x="70" y="114" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a2020">SMOTE balanced</text>
+    <text x="70" y="126" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff4444" font-weight="bold">⚠ HIGH RISK</text>
+  </g>
+
+  <!-- Signal 2: Duplicate -->
+  <g transform="translate(360, 55)">
+    <rect x="0" y="0" width="140" height="130" rx="8" fill="#201008" stroke="#ff6b35" stroke-width="1.5"/>
+    <text x="70" y="20" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff6b35" letter-spacing="1">DUPLICATE</text>
+    <text x="70" y="55" text-anchor="middle" font-family="monospace" font-size="28" fill="#ff6b35" font-weight="bold">2x</text>
+    <text x="70" y="72" text-anchor="middle" font-family="monospace" font-size="8" fill="#ff8040">Event fingerprint</text>
+    <text x="70" y="84" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a2820">match found in</text>
+    <text x="70" y="96" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a2820">historical claims</text>
+    <text x="70" y="108" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a2820">CLM-1987, CLM-2015</text>
+    <text x="70" y="122" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff6b35" font-weight="bold">⚠ DUPLICATE</text>
+  </g>
+
+  <!-- Signal 3: Timing -->
+  <g transform="translate(515, 55)">
+    <rect x="0" y="0" width="140" height="130" rx="8" fill="#0a1508" stroke="#00ff88" stroke-width="1.5"/>
+    <text x="70" y="20" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ff88" letter-spacing="1">TIMING</text>
+    <text x="70" y="52" text-anchor="middle" font-family="monospace" font-size="24" fill="#00ff88" font-weight="bold">+47d</text>
+    <text x="70" y="66" text-anchor="middle" font-family="monospace" font-size="8" fill="#00aa66">since policy start</text>
+    <text x="70" y="82" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6040">Submission delay:</text>
+    <text x="70" y="94" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6040">3 days — Normal</text>
+    <text x="70" y="106" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6040">Policy age: Normal</text>
+    <text x="70" y="122" text-anchor="middle" font-family="monospace" font-size="9" fill="#00ff88" font-weight="bold">✓ OK</text>
+  </g>
+
+  <!-- Signal 4: Inconsistency -->
+  <g transform="translate(670, 55)">
+    <rect x="0" y="0" width="140" height="130" rx="8" fill="#200808" stroke="#ff4444" stroke-width="1.5"/>
+    <text x="70" y="20" text-anchor="middle" font-family="monospace" font-size="8" fill="#ff4444" letter-spacing="1">INCONSISTENCY</text>
+    <text x="70" y="48" text-anchor="middle" font-family="monospace" font-size="22" fill="#ff4444" font-weight="bold">3 flags</text>
+    <text x="70" y="66" text-anchor="middle" font-family="monospace" font-size="8" fill="#ff6b35">Narrative vs evidence</text>
+    <text x="70" y="80" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a2020">× Hospital different city</text>
+    <text x="70" y="92" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a2020">× Dr. not FHIR listed</text>
+    <text x="70" y="104" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a2020">× Date mismatch ±2d</text>
+    <text x="70" y="122" text-anchor="middle" font-family="monospace" font-size="9" fill="#ff4444" font-weight="bold">⚠ MISMATCH</text>
+  </g>
+
+  <!-- Signal 5: Network -->
+  <g transform="translate(825, 55)">
+    <rect x="0" y="0" width="140" height="130" rx="8" fill="#201008" stroke="#ffaa00" stroke-width="1.5"/>
+    <text x="70" y="20" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffaa00" letter-spacing="1">NETWORK</text>
+    <!-- Network visualization -->
+    <circle cx="70" cy="60" r="12" fill="none" stroke="#ffaa00" stroke-width="1.5"/>
+    <circle cx="45" cy="75" r="7" fill="none" stroke="#ff6b35" stroke-width="1"/>
+    <circle cx="95" cy="75" r="7" fill="none" stroke="#ff6b35" stroke-width="1"/>
+    <circle cx="55" cy="45" r="7" fill="none" stroke="#ff6b35" stroke-width="1"/>
+    <line x1="70" y1="60" x2="45" y2="75" stroke="#ffaa00" stroke-width="1" opacity="0.6"/>
+    <line x1="70" y1="60" x2="95" y2="75" stroke="#ffaa00" stroke-width="1" opacity="0.6"/>
+    <line x1="70" y1="60" x2="55" y2="45" stroke="#ffaa00" stroke-width="1" opacity="0.6"/>
+    <line x1="45" y1="75" x2="55" y2="45" stroke="#ff6b35" stroke-width="0.5" opacity="0.4"/>
+    <text x="70" y="100" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a3020">Provider co-occurrence</text>
+    <text x="70" y="112" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a3020">4 claims same provider</text>
+    <text x="70" y="124" text-anchor="middle" font-family="monospace" font-size="9" fill="#ffaa00" font-weight="bold">⚠ SUSPICIOUS</text>
+  </g>
+
+  <!-- Aggregator -->
+  <text x="500" y="220" text-anchor="middle" font-family="monospace" font-size="10" fill="#2a1010" letter-spacing="3">SIGNAL AGGREGATION</text>
+  
+  <!-- Converging lines from all 5 signals -->
+  <line x1="275" y1="185" x2="460" y2="265" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1s" repeatCount="indefinite"/>
+  </line>
+  <line x1="430" y1="185" x2="475" y2="265" stroke="#ff6b35" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1s" begin="0.2s" repeatCount="indefinite"/>
+  </line>
+  <line x1="585" y1="185" x2="500" y2="265" stroke="#00ff88" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1s" begin="0.4s" repeatCount="indefinite"/>
+  </line>
+  <line x1="740" y1="185" x2="525" y2="265" stroke="#ff4444" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1s" begin="0.6s" repeatCount="indefinite"/>
+  </line>
+  <line x1="895" y1="185" x2="540" y2="265" stroke="#ffaa00" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1s" begin="0.8s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Final fraud score box -->
+  <g transform="translate(360, 270)" filter="url(#redGlow)">
+    <rect x="0" y="0" width="280" height="80" rx="10" fill="#1a0505" stroke="#ff4444" stroke-width="2"/>
+    <text x="140" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#ff4444" letter-spacing="3">COMPOSITE FRAUD SCORE</text>
+    <text x="140" y="60" text-anchor="middle" font-family="'Courier New', monospace" font-size="40" fill="#ff4444" font-weight="bold">0.91</text>
+    <!-- Score bar -->
+    <rect x="20" y="68" width="240" height="6" rx="3" fill="#1a0808"/>
+    <rect x="20" y="68" width="218" height="6" rx="3" fill="#ff4444">
+      <animate attributeName="width" values="0;218" dur="1.5s" fill="freeze"/>
+    </rect>
+  </g>
+
+  <!-- Decision fork -->
+  <line x1="500" y1="350" x2="500" y2="380" stroke="#ff4444" stroke-width="2" opacity="0.8"/>
+  <line x1="500" y1="380" x2="300" y2="415" stroke="#ff4444" stroke-width="2" opacity="0.5" stroke-dasharray="4,2"/>
+  <line x1="500" y1="380" x2="700" y2="415" stroke="#ffaa00" stroke-width="2" opacity="0.5" stroke-dasharray="4,2"/>
+
+  <!-- Decision boxes -->
+  <g transform="translate(180, 415)">
+    <rect x="0" y="0" width="200" height="45" rx="8" fill="#330000" stroke="#ff4444" stroke-width="2"/>
+    <text x="100" y="28" text-anchor="middle" font-family="monospace" font-size="14" fill="#ff4444" font-weight="bold">✗ AUTO REJECT</text>
+    <text x="100" y="42" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a2020">score ≥ 0.7 → REJECTED</text>
+  </g>
+
+  <g transform="translate(620, 415)">
+    <rect x="0" y="0" width="200" height="45" rx="8" fill="#1a1000" stroke="#ffaa00" stroke-width="2"/>
+    <text x="100" y="28" text-anchor="middle" font-family="monospace" font-size="12" fill="#ffaa00" font-weight="bold">👤 HUMAN REVIEW</text>
+    <text x="100" y="42" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a3020">0.4–0.7 → ESCALATED</text>
+  </g>
+
+  <!-- Threshold labels -->
+  <text x="395" y="395" font-family="monospace" font-size="8" fill="#ff4444">score ≥ 0.7</text>
+  <text x="540" y="395" font-family="monospace" font-size="8" fill="#ffaa00">0.4 ≤ score &lt; 0.7</text>
+
+  <!-- Model performance note -->
+  <text x="500" y="472" text-anchor="middle" font-family="monospace" font-size="9" fill="#2a1010">Model trained on 10,000 synthetic claims · Fraudulent: ~0.93 avg · Legitimate: ~0.20 avg · SMOTE resampled</text>
+</svg>

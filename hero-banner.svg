@@ -1,0 +1,268 @@
+<svg viewBox="0 0 1200 400" xmlns="http://www.w3.org/2000/svg" width="1200" height="400">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1b2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#071020;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0066ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff88;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00cc66;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2a3a" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="400" fill="url(#bgGrad)"/>
+  <rect width="1200" height="400" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Animated circuit lines -->
+  <g opacity="0.15">
+    <line x1="0" y1="100" x2="300" y2="100" stroke="#00d4ff" stroke-width="1">
+      <animate attributeName="stroke-dashoffset" from="300" to="0" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <line x1="900" y1="300" x2="1200" y2="300" stroke="#00d4ff" stroke-width="1">
+      <animate attributeName="stroke-dashoffset" from="-300" to="0" dur="2.5s" repeatCount="indefinite"/>
+    </line>
+    <line x1="600" y1="0" x2="600" y2="400" stroke="#00d4ff" stroke-width="0.5" opacity="0.5"/>
+  </g>
+
+  <!-- Floating orbs -->
+  <circle cx="100" cy="80" r="60" fill="#00d4ff" opacity="0.04">
+    <animate attributeName="r" values="60;80;60" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1100" cy="320" r="80" fill="#0066ff" opacity="0.05">
+    <animate attributeName="r" values="80;60;80" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="600" cy="200" r="150" fill="#00d4ff" opacity="0.02">
+    <animate attributeName="r" values="150;180;150" dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Left: Claim submission icon panel -->
+  <g transform="translate(80, 120)">
+    <!-- Document icon -->
+    <rect x="0" y="0" width="80" height="100" rx="6" fill="#0d2040" stroke="#1a4060" stroke-width="1"/>
+    <rect x="10" y="15" width="60" height="6" rx="3" fill="#1a4060"/>
+    <rect x="10" y="28" width="45" height="4" rx="2" fill="#1a4060"/>
+    <rect x="10" y="38" width="55" height="4" rx="2" fill="#1a4060"/>
+    <rect x="10" y="48" width="35" height="4" rx="2" fill="#1a4060"/>
+    <rect x="10" y="68" width="60" height="18" rx="4" fill="#00d4ff" opacity="0.8"/>
+    <text x="40" y="81" text-anchor="middle" font-family="monospace" font-size="9" fill="#0a0e1a" font-weight="bold">SUBMIT</text>
+    <!-- Pulse animation on doc -->
+    <rect x="0" y="0" width="80" height="100" rx="6" fill="none" stroke="#00d4ff" stroke-width="1" opacity="0">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-width" values="1;3;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="40" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#4a6080">CLAIM INTAKE</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(180, 160)" filter="url(#glow)">
+    <line x1="0" y1="10" x2="60" y2="10" stroke="url(#accentGrad)" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0 60;60 0" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="55,5 65,10 55,15" fill="#00d4ff"/>
+  </g>
+
+  <!-- Center: Main pipeline visual -->
+  <g transform="translate(260, 60)">
+    <!-- Big center card -->
+    <rect x="0" y="0" width="680" height="280" rx="12" fill="#0a1525" stroke="#1a3050" stroke-width="1"/>
+    
+    <!-- Header bar -->
+    <rect x="0" y="0" width="680" height="40" rx="12" fill="#0d1e35"/>
+    <rect x="0" y="28" width="680" height="12" fill="#0d1e35"/>
+    <circle cx="20" cy="20" r="6" fill="#ff4444"/>
+    <circle cx="38" cy="20" r="6" fill="#ffaa00"/>
+    <circle cx="56" cy="20" r="6" fill="#00cc66"/>
+    <text x="340" y="25" text-anchor="middle" font-family="monospace" font-size="12" fill="#4a7090" letter-spacing="3">CLAIMPILOT — AGENT PIPELINE</text>
+
+    <!-- Agent nodes -->
+    <!-- Intake Agent -->
+    <g transform="translate(20, 60)">
+      <rect x="0" y="0" width="120" height="70" rx="8" fill="#0f2035" stroke="#00d4ff" stroke-width="1.5"/>
+      <circle cx="60" cy="20" r="12" fill="#00d4ff" opacity="0.2"/>
+      <text x="60" y="24" text-anchor="middle" font-family="monospace" font-size="14" fill="#00d4ff">📥</text>
+      <text x="60" y="45" text-anchor="middle" font-family="monospace" font-size="9" fill="#00d4ff" font-weight="bold">INTAKE</text>
+      <text x="60" y="57" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a7090">PDF · Audio · Text</text>
+      <!-- Animated border -->
+      <rect x="0" y="0" width="120" height="70" rx="8" fill="none" stroke="#00d4ff" stroke-width="2" opacity="0">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="0s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Arrow -->
+    <line x1="140" y1="95" x2="170" y2="95" stroke="#00d4ff" stroke-width="1.5" opacity="0.6">
+      <animate attributeName="stroke-dasharray" values="0 30;30 0;0 30" dur="1.5s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="166,91 174,95 166,99" fill="#00d4ff" opacity="0.6"/>
+
+    <!-- Validation Agent -->
+    <g transform="translate(170, 60)">
+      <rect x="0" y="0" width="120" height="70" rx="8" fill="#0f2035" stroke="#7c3aed" stroke-width="1.5"/>
+      <text x="60" y="24" text-anchor="middle" font-family="monospace" font-size="14" fill="#7c3aed">🔍</text>
+      <text x="60" y="45" text-anchor="middle" font-family="monospace" font-size="9" fill="#a78bfa" font-weight="bold">VALIDATION</text>
+      <text x="60" y="57" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a7090">RAG · Pinecone</text>
+      <rect x="0" y="0" width="120" height="70" rx="8" fill="none" stroke="#7c3aed" stroke-width="2" opacity="0">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="0.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Fork arrows -->
+    <line x1="290" y1="95" x2="310" y2="65" stroke="#00d4ff" stroke-width="1" opacity="0.5">
+      <animate attributeName="stroke-dasharray" values="0 40;40 0;0 40" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    </line>
+    <line x1="290" y1="95" x2="310" y2="125" stroke="#ff6b35" stroke-width="1" opacity="0.5">
+      <animate attributeName="stroke-dasharray" values="0 40;40 0;0 40" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Investigation Agent -->
+    <g transform="translate(310, 30)">
+      <rect x="0" y="0" width="130" height="70" rx="8" fill="#0f2035" stroke="#0066ff" stroke-width="1.5"/>
+      <text x="65" y="24" text-anchor="middle" font-family="monospace" font-size="14" fill="#0066ff">🌐</text>
+      <text x="65" y="43" text-anchor="middle" font-family="monospace" font-size="9" fill="#60a5fa" font-weight="bold">INVESTIGATION</text>
+      <text x="65" y="55" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a7090">Weather·FHIR·Geo</text>
+      <rect x="0" y="0" width="130" height="70" rx="8" fill="none" stroke="#0066ff" stroke-width="2" opacity="0">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Fraud Detection Agent -->
+    <g transform="translate(310, 110)">
+      <rect x="0" y="0" width="130" height="70" rx="8" fill="#0f2035" stroke="#ff4444" stroke-width="1.5"/>
+      <text x="65" y="24" text-anchor="middle" font-family="monospace" font-size="14" fill="#ff4444">🚨</text>
+      <text x="65" y="43" text-anchor="middle" font-family="monospace" font-size="9" fill="#f87171" font-weight="bold">FRAUD DETECT</text>
+      <text x="65" y="55" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a7090">ML·Rules·Network</text>
+      <rect x="0" y="0" width="130" height="70" rx="8" fill="none" stroke="#ff4444" stroke-width="2" opacity="0">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="1.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Merge arrow -->
+    <line x1="440" y1="65" x2="470" y2="95" stroke="#00ff88" stroke-width="1" opacity="0.5">
+      <animate attributeName="stroke-dasharray" values="0 45;45 0;0 45" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    </line>
+    <line x1="440" y1="145" x2="470" y2="115" stroke="#00ff88" stroke-width="1" opacity="0.5">
+      <animate attributeName="stroke-dasharray" values="0 45;45 0;0 45" dur="2s" begin="1.2s" repeatCount="indefinite"/>
+    </line>
+
+    <!-- Settlement Agent -->
+    <g transform="translate(470, 60)">
+      <rect x="0" y="0" width="130" height="70" rx="8" fill="#0f2035" stroke="#00ff88" stroke-width="1.5"/>
+      <text x="65" y="24" text-anchor="middle" font-family="monospace" font-size="14" fill="#00ff88">⚖️</text>
+      <text x="65" y="43" text-anchor="middle" font-family="monospace" font-size="9" fill="#4ade80" font-weight="bold">SETTLEMENT</text>
+      <text x="65" y="55" text-anchor="middle" font-family="monospace" font-size="7" fill="#4a7090">Calc · PDF · Decision</text>
+      <rect x="0" y="0" width="130" height="70" rx="8" fill="none" stroke="#00ff88" stroke-width="2" opacity="0">
+        <animate attributeName="opacity" values="0;1;0" dur="3s" begin="2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- Status bar bottom -->
+    <rect x="20" y="195" width="640" height="60" rx="8" fill="#060f1a"/>
+    <text x="30" y="215" font-family="monospace" font-size="9" fill="#4a7090">LIVE STATUS</text>
+    
+    <!-- Claim progress bars -->
+    <g transform="translate(30, 222)">
+      <rect x="0" y="0" width="80" height="6" rx="3" fill="#1a2a3a"/>
+      <rect x="0" y="0" width="80" height="6" rx="3" fill="#00d4ff">
+        <animate attributeName="width" values="0;80;0" dur="4s" repeatCount="indefinite"/>
+      </rect>
+      <text x="85" y="6" font-family="monospace" font-size="8" fill="#00d4ff">CLAIM-2041 — AUTO</text>
+    </g>
+    <g transform="translate(30, 234)">
+      <rect x="0" y="0" width="80" height="6" rx="3" fill="#1a2a3a"/>
+      <rect x="0" y="0" width="55" height="6" rx="3" fill="#ff6b35">
+        <animate attributeName="width" values="0;55;0" dur="4s" begin="0.8s" repeatCount="indefinite"/>
+      </rect>
+      <text x="85" y="6" font-family="monospace" font-size="8" fill="#ff6b35">CLAIM-2042 — HEALTH · FRAUD REVIEW</text>
+    </g>
+    <g transform="translate(30, 246)">
+      <rect x="0" y="0" width="80" height="6" rx="3" fill="#1a2a3a"/>
+      <rect x="0" y="0" width="70" height="6" rx="3" fill="#00ff88">
+        <animate attributeName="width" values="0;70;0" dur="4s" begin="1.6s" repeatCount="indefinite"/>
+      </rect>
+      <text x="85" y="6" font-family="monospace" font-size="8" fill="#00ff88">CLAIM-2040 — PROPERTY · APPROVED ✓</text>
+    </g>
+  </g>
+
+  <!-- Right: Output panel -->
+  <g transform="translate(1000, 100)">
+    <rect x="0" y="0" width="130" height="200" rx="8" fill="#0a1525" stroke="#1a3050" stroke-width="1"/>
+    
+    <!-- Approved badge -->
+    <rect x="10" y="15" width="110" height="40" rx="6" fill="#003320" stroke="#00ff88" stroke-width="1">
+      <animate attributeName="opacity" values="1;0.6;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="65" y="30" text-anchor="middle" font-family="monospace" font-size="10" fill="#00ff88" font-weight="bold">✓ APPROVED</text>
+    <text x="65" y="45" text-anchor="middle" font-family="monospace" font-size="8" fill="#4ade80">$12,400 payout</text>
+    
+    <!-- Rejected badge -->
+    <rect x="10" y="65" width="110" height="40" rx="6" fill="#330000" stroke="#ff4444" stroke-width="1">
+      <animate attributeName="opacity" values="1;0.6;1" dur="2.5s" begin="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <text x="65" y="80" text-anchor="middle" font-family="monospace" font-size="10" fill="#ff4444" font-weight="bold">✗ REJECTED</text>
+    <text x="65" y="95" text-anchor="middle" font-family="monospace" font-size="8" fill="#f87171">Fraud Score: 0.91</text>
+    
+    <!-- Human review badge -->
+    <rect x="10" y="115" width="110" height="40" rx="6" fill="#1a1500" stroke="#ffaa00" stroke-width="1">
+      <animate attributeName="opacity" values="1;0.6;1" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </rect>
+    <text x="65" y="130" text-anchor="middle" font-family="monospace" font-size="10" fill="#ffaa00" font-weight="bold">👤 ESCALATED</text>
+    <text x="65" y="145" text-anchor="middle" font-family="monospace" font-size="8" fill="#fbbf24">Human Review</text>
+
+    <text x="65" y="175" text-anchor="middle" font-family="monospace" font-size="8" fill="#4a6080">PDF GENERATED</text>
+    <rect x="25" y="180" width="80" height="14" rx="3" fill="#0d2040" stroke="#1a4060"/>
+    <text x="65" y="191" text-anchor="middle" font-family="monospace" font-size="7" fill="#00d4ff">settlement.pdf ↓</text>
+  </g>
+
+  <!-- Arrow to output -->
+  <g transform="translate(953, 195)" filter="url(#glow)">
+    <line x1="0" y1="5" x2="47" y2="5" stroke="url(#greenGrad)" stroke-width="2">
+      <animate attributeName="stroke-dasharray" values="0 47;47 0" dur="2s" repeatCount="indefinite"/>
+    </line>
+    <polygon points="42,1 50,5 42,9" fill="#00ff88"/>
+  </g>
+
+  <!-- Title text -->
+  <text x="600" y="355" text-anchor="middle" font-family="'Courier New', monospace" font-size="28" fill="#ffffff" font-weight="900" letter-spacing="8" filter="url(#strongGlow)">CLAIMPILOT</text>
+  <text x="600" y="378" text-anchor="middle" font-family="monospace" font-size="11" fill="#4a7090" letter-spacing="4">AUTONOMOUS INSURANCE CLAIMS · LANGGRAPH + CLAUDE TOOL_USE</text>
+
+  <!-- Tech badges row -->
+  <g transform="translate(350, 385)">
+    <rect x="0" y="0" width="70" height="14" rx="7" fill="#1a2a3a" stroke="#00d4ff" stroke-width="0.5"/>
+    <text x="35" y="10" text-anchor="middle" font-family="monospace" font-size="7" fill="#00d4ff">LangGraph</text>
+    <rect x="80" y="0" width="60" height="14" rx="7" fill="#1a2a3a" stroke="#a78bfa" stroke-width="0.5"/>
+    <text x="110" y="10" text-anchor="middle" font-family="monospace" font-size="7" fill="#a78bfa">Claude AI</text>
+    <rect x="150" y="0" width="60" height="14" rx="7" fill="#1a2a3a" stroke="#60a5fa" stroke-width="0.5"/>
+    <text x="180" y="10" text-anchor="middle" font-family="monospace" font-size="7" fill="#60a5fa">FastAPI</text>
+    <rect x="220" y="0" width="60" height="14" rx="7" fill="#1a2a3a" stroke="#00ff88" stroke-width="0.5"/>
+    <text x="250" y="10" text-anchor="middle" font-family="monospace" font-size="7" fill="#00ff88">Next.js 15</text>
+    <rect x="290" y="0" width="70" height="14" rx="7" fill="#1a2a3a" stroke="#ff6b35" stroke-width="0.5"/>
+    <text x="325" y="10" text-anchor="middle" font-family="monospace" font-size="7" fill="#ff6b35">Pinecone RAG</text>
+    <rect x="370" y="0" width="75" height="14" rx="7" fill="#1a2a3a" stroke="#ff4444" stroke-width="0.5"/>
+    <text x="407" y="10" text-anchor="middle" font-family="monospace" font-size="7" fill="#ff4444">IsolationForest</text>
+    <rect x="455" y="0" width="60" height="14" rx="7" fill="#1a2a3a" stroke="#fbbf24" stroke-width="0.5"/>
+    <text x="485" y="10" text-anchor="middle" font-family="monospace" font-size="7" fill="#fbbf24">Celery+Redis</text>
+  </g>
+</svg>
